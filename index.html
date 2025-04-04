@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="tailwind.css" rel="stylesheet" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>Vite App</title>
+    <style>
+      body {
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .font-exo {
+        font-family: "Exo 2", sans-serif;
+      }
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="popUpEl" class="bg-black bg-opacity-75 fixed px-4 py-2 rounded-lg">
+      <h2 class="text-white text-xs">
+        <span id="populationEl"></span>
+        <span>Population</span>
+      </h2>
+      <p id="populationValueEl" class="text-white font-bold text-lg">300 mil</p>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+    <div class="xl:flex h-screen bg-black">
+      <div class="xl:w-1/2 flex flex-col justify-center px-8 pt-16 xl:pt-0">
+        <div style="max-width: 800px" class="mx-auto">
+          <h1 class="text-white text-4xl mb-8 font-exo leading-tight">
+            REDEFINING THE FRONTIERS OF COSMIC DISCOVERY
+          </h1>
+          <p class="text-gray-400 mb-8 font-lato">
+            Tiurbe Serban's Vision: Bringing the Universe to Life with Computer
+            Graphics.
+          </p>
+          <div class="container">
+            <p class="text-gray-400 mb-0 font-lato">
+              Some simple instructions to get you started:
+            </p>
+            <ul class="text-gray-400 mt-0 mb-8 font-lato ml-3">
+              <li>Install the Vite CLI.</li>
+              <li>Run <code>vite</code> to start the dev server.</li>
+              <li>Open <code>index.html</code> in your browser.</li>
+              <li>Use the mouse to drag the sphere in order to rotate it.</li>
+              <li>Press P to stop the rotation of the sphere.</li>
+              <li>
+                Hover over the blue dots to see the country's name and
+                population.
+              </li>
+              <li>
+                Press E in order to increase the rotation speed of the sphere
+                and Q to decrease it.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a
+              href=""
+              class="text-white bg-green-600 inline-block px-8 py-4 rounded-full"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="h-screen xl:w-1/2" id="canvasContainer">
+        <canvas> </canvas>
+      </div>
+    </div>
+  </body>
+</html>
